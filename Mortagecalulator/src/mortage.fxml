@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EstimatorControl">
+   <children>
+      <AnchorPane prefHeight="348.0" prefWidth="205.0">
+         <children>
+            <TextField fx:id="TotalGIncome" layoutX="40.0" layoutY="69.0" onAction="#handleSave" AnchorPane.leftAnchor="49.0" AnchorPane.topAnchor="100.0" />
+            <TextField fx:id="TotalMonthlyDebt" layoutX="50.0" layoutY="80.0" onAction="#handleSave" AnchorPane.leftAnchor="49.0" AnchorPane.topAnchor="143.0" />
+            <TextField fx:id="TotalDownPayment" layoutX="50.0" layoutY="84.0" onAction="#handleSave" AnchorPane.leftAnchor="49.0" AnchorPane.topAnchor="191.0" />
+            <TextField fx:id="MonthlyInterestRate" layoutX="49.0" layoutY="220.0" onAction="#handleSave" AnchorPane.leftAnchor="49.0" AnchorPane.topAnchor="234.0" />
+            <ComboBox fx:id="Term" layoutX="26.0" layoutY="270.0" prefHeight="23.0" prefWidth="111.0" promptText="Term (yrs)" AnchorPane.leftAnchor="25.0" />
+            <Button layoutX="145.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleSave" text="Calculate" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="275.0" />
+            <Label layoutX="50.0" layoutY="70.0" prefHeight="14.0" prefWidth="110.0" text="Gross Income ($)" AnchorPane.leftAnchor="49.0" AnchorPane.topAnchor="80.0" />
+            <Label layoutX="60.0" layoutY="80.0" prefHeight="14.0" prefWidth="160.0" text="Total Monthly Debt ($)" AnchorPane.leftAnchor="49.0" AnchorPane.topAnchor="127.0" />
+            <Label layoutX="60.0" layoutY="80.0" prefHeight="14.0" prefWidth="110.0" text="Down Payment ($)" AnchorPane.leftAnchor="49.0" AnchorPane.topAnchor="172.0" />
+            <Label layoutX="17.0" layoutY="12.0" prefHeight="63.0" prefWidth="230.0" text="Mortage Calculator">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="490.0" layoutY="227.0" prefHeight="16.0" prefWidth="163.0" text="MonthlyRateOFintrest (%)" AnchorPane.leftAnchor="49.0" AnchorPane.topAnchor="220.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</fx:root>
