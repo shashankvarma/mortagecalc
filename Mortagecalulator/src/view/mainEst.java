@@ -2,16 +2,28 @@ package view;
 
 import java.lang.Math;
 
+import javafx.fxml.FXML;
+
 public class mainEst {
+	@FXML
 	public double TotalGrossIncome;
-	public double TotalMonthlyDebt;
-	public double MortageInterestRate;
-	public int Term;
-	public double DownPayment;
-	public double Housingraw;
-	public double Housingall;
-	public double Maximum;
-	public double Mortage;
+	@FXML
+	private double TotalMonthlyDebt;
+	@FXML
+	private double MortageInterestRate;
+	@FXML
+	private int Term;
+	@FXML
+	private double DownPayment;
+	@FXML
+	private double Housingraw;
+	@FXML
+	private double Housingall;
+	@FXML
+	private double Maximum;
+	@FXML
+	private double Mortage;
+	@FXML
 	
 	public double getTotalGrossIncome(){
 		return this.TotalGrossIncome;	
