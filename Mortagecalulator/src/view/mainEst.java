@@ -16,11 +16,11 @@ public class mainEst {
 	@FXML
 	private double DownPayment;
 	@FXML
-	private double Housingraw;
+	private double Housingcost;
 	@FXML
 	private double Housingall;
 	@FXML
-	private double Maximum;
+	private double max;
 	@FXML
 	private double Mortage;
 	@FXML
@@ -65,12 +65,12 @@ public class mainEst {
 		this.DownPayment = DownPayment;
 	}
 	
-	public double getHousingRaw(){
-		return this.Housingraw;	
+	public double getHousingcost(){
+		return this.Housingcost;	
 	}
 	
 	public void setHousingRaw(double HousingRaw){
-		this.Housingraw = HousingRaw;
+		this.Housingcost = HousingRaw;
 	}
 	
 	public double getHousingAll(){
@@ -81,12 +81,12 @@ public class mainEst {
 		this.Housingall = HousingAll;
 	}
 	
-	public double getMaximum(){
-		return this.Maximum;	
+	public double getmax(){
+		return this.max;	
 	}
 	
-	public void setMaximum(double Maximum){
-		this.Maximum = Maximum;
+	public void setmax(double max){
+		this.max = max;
 	}
 	
 	public double getMortage(){
@@ -97,19 +97,19 @@ public class mainEst {
 		this.Mortage = Mortage;
 	}
 
-	public void calculateHousingRaw(){
-		this.Housingraw = (this.TotalGrossIncome / 12) * 0.18;
+	public void calculateHousingcost(){
+		this.Housingcost = (this.TotalGrossIncome / 12) * 0.18;
 	}
 	
 	public void calculateHousingAll(){
-		this.Housingraw = (this.TotalGrossIncome / 12) * 0.36 - this.TotalMonthlyDebt;
+		this.Housingcost = (this.TotalGrossIncome / 12) * 0.36 - this.TotalMonthlyDebt;
 	}
 	
-	public void calculateMaximum(){
-		this.Maximum = Math.min(this.Housingraw, this.Housingall);
+	public void calculatemax(){
+		this.max = Math.min(this.Housingcost, this.Housingall);
 	}
 	
 	public void calculateMortage(){
-		this.Maximum = this.Maximum*Math.pow(1 +  MortageInterestRate/12, this.Term*12);
+		this.max = this.max*Math.pow(1 +  MortageInterestRate/12, this.Term*12);
 	}
 }
