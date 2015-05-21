@@ -8,7 +8,7 @@ public class mainEst {
 	@FXML
 	public double TotalGrossIncome;
 	@FXML
-	private double TotalMonthlyDebt;
+	private double TotalMonthDebt;
 	@FXML
 	private double MortageInterestRate;
 	@FXML
@@ -34,11 +34,11 @@ public class mainEst {
 	}
 	
 	public double getTotalMonthlyDebt(){
-		return this.TotalMonthlyDebt;	
+		return this.TotalMonthDebt;	
 	}
 	
-	public void setTotalMonthlyDebt(double TotalMonthlyDebt){
-		this.TotalMonthlyDebt = TotalMonthlyDebt;
+	public void setTotalMonthlyDebt(double TotalMonthDebt){
+		this.TotalMonthDebt = TotalMonthDebt;
 	}
 	
 	public double getMortageInterestRate(){
@@ -98,11 +98,11 @@ public class mainEst {
 	}
 
 	public void calculateHousingcost(){
-		this.Housingcost = (this.TotalGrossIncome / 12) * 0.18;
+		this.Housingcost = (this.TotalGrossIncome / 365) * 0.18;
 	}
 	
 	public void calculateHousingAll(){
-		this.Housingcost = (this.TotalGrossIncome / 12) * 0.36 - this.TotalMonthlyDebt;
+		this.Housingcost = (this.TotalGrossIncome / 365) * 0.36 - this.TotalMonthDebt;
 	}
 	
 	public void calculatemax(){
@@ -110,6 +110,6 @@ public class mainEst {
 	}
 	
 	public void calculateMortage(){
-		this.max = this.max*Math.pow(1 +  MortageInterestRate/12, this.Term*12);
+		this.max = this.max*Math.pow(1 +  MortageInterestRate/12, this.Term/12);
 	}
 }
