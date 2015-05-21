@@ -8,8 +8,8 @@ public class mainEst {
 	public double MortageInterestRate;
 	public int Term;
 	public double DownPayment;
-	public double HousingRaw;
-	public double HousingAll;
+	public double Housingraw;
+	public double Housingall;
 	public double Maximum;
 	public double Mortage;
 	
@@ -54,19 +54,19 @@ public class mainEst {
 	}
 	
 	public double getHousingRaw(){
-		return this.HousingRaw;	
+		return this.Housingraw;	
 	}
 	
 	public void setHousingRaw(double HousingRaw){
-		this.HousingRaw = HousingRaw;
+		this.Housingraw = HousingRaw;
 	}
 	
 	public double getHousingAll(){
-		return this.HousingAll;	
+		return this.Housingall;	
 	}
 	
 	public void setHousingAll(double HousingAll){
-		this.HousingAll = HousingAll;
+		this.Housingall = HousingAll;
 	}
 	
 	public double getMaximum(){
@@ -86,15 +86,15 @@ public class mainEst {
 	}
 
 	public void calculateHousingRaw(){
-		this.HousingRaw = (this.TotalGrossIncome / 12) * 0.18;
+		this.Housingraw = (this.TotalGrossIncome / 12) * 0.18;
 	}
 	
 	public void calculateHousingAll(){
-		this.HousingRaw = (this.TotalGrossIncome / 12) * 0.36 - this.TotalMonthlyDebt;
+		this.Housingraw = (this.TotalGrossIncome / 12) * 0.36 - this.TotalMonthlyDebt;
 	}
 	
 	public void calculateMaximum(){
-		this.Maximum = Math.min(this.HousingRaw, this.HousingAll);
+		this.Maximum = Math.min(this.Housingraw, this.Housingall);
 	}
 	
 	public void calculateMortage(){
